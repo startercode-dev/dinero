@@ -1,0 +1,84 @@
+@use '../helper' as *;
+
+.pricing {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: min(85%, 1920px);
+    margin-inline: auto;
+    gap: $space-m;
+    // background-color: darkseagreen;
+
+    h2 {
+        font-family: $playfair;
+        font-size: $step-2;
+    }
+
+    &__options {
+        color: #888;
+        font-family: inherit;
+        font-size: $step-0;
+        justify-self: center;
+
+        p {
+            color: $black;
+        }
+    }
+
+    .option.active {
+        color: $black;
+    }
+
+    &__cards {
+        width: min(65vw, 88rem);
+        justify-self: center;
+        gap: $space-xl;
+    }
+
+    .card {
+        border: 1px solid #000;
+        padding: $space-s $space-m;
+        gap: 1rem;
+    }
+
+    .card-price {
+        font-family: $urbanist;
+        font-size: $step-0;
+        span {
+            font-size: $step-2;
+            font-weight: 700;
+        }
+    }
+
+    .card-title {
+        font-family: $playfair;
+        font-size: $step-1;
+    }
+
+    .card-description {
+        font-family: $urbanist;
+        font-size: $step--1;
+        letter-spacing: 1;
+    }
+
+    .card-list {
+        font-family: $urbanist;
+        align-items: flex-end;
+        font-size: $step--1;
+        letter-spacing: 0.8;
+        i {
+            margin: 0 $space-3xs;
+        }
+    }
+
+    .card-cta {
+        justify-self: center;
+
+        font-family: $urbanist;
+        font-size: $step--1;
+        letter-spacing: 5;
+
+        border: 1px solid #000;
+        padding: $space-2xs $space-l;
+        margin-top: $space-m;
+    }
+}
