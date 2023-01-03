@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+@mixin link-style {
+    font-family: $urbanist;
+    border: 1.5px solid #92795a;
+    border-radius: 5px;
+    color: #92795a;
+    font-size: 2rem;
+    letter-spacing: 5;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+    display: inline-block;
+}
