@@ -1,7 +1,7 @@
 @use '../helper' as *;
 
 .hero {
-    width: min(85%, 1920px);
+    width: min(85%, 192rem);
     height: $docHeight;
     margin-inline: auto;
     align-items: center;
