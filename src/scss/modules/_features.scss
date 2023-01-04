@@ -3,14 +3,14 @@
 .features {
     margin-inline: auto;
     width: min(85%, 192rem);
-    background: blue;
     align-items: center;
     margin-bottom: 9.6rem;
+    // background: blue;
 
     &__cards {
         width: min(65vw, 90rem);
         width: rem;
-        background: green;
+        // background: green;
         gap: 7rem;
         margin-bottom: 9.6rem;
     }
