@@ -1,8 +1,35 @@
+:root {
+    --doc-height: 100%;
+}
+$docHeight: var(--doc-height);
+
 $urbanist: 'Urbanist', sans-serif;
 $playfair: 'Playfair Display', serif;
 
-// - FONT SIZE SYSTEM (px)
-// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+//**** COLORS ****//
+$black: #393937;
+$brown: #423934;
 
-// - SPACING SYSTEM (px)
-// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+//**** FONT SIZE ****//
+$step--5: clamp(0.45rem, calc(0.37rem + 0.16vw), 0.56rem);
+$step--4: clamp(0.54rem, calc(0.39rem + 0.3vw), 0.75rem);
+$step--3: clamp(0.65rem, calc(0.4rem + 0.5vw), 1rem);
+$step--2: clamp(0.78rem, calc(0.38rem + 0.79vw), 1.34rem);
+$step--1: clamp(0.94rem, calc(0.33rem + 1.21vw), 1.78rem);
+$step-0: clamp(1.13rem, calc(0.23rem + 1.79vw), 2.38rem);
+$step-1: clamp(1.35rem, calc(0.05rem + 2.59vw), 3.17rem);
+$step-2: clamp(1.62rem, calc(-0.24rem + 3.71vw), 4.22rem);
+$step-3: clamp(1.94rem, calc(-0.69rem + 5.26vw), 5.63rem);
+$step-4: clamp(2.33rem, calc(-1.36rem + 7.38vw), 7.5rem);
+$step-5: clamp(2.8rem, calc(-2.34rem + 10.28vw), 10rem);
+
+//**** SPACING ****//
+$space-3xs: clamp(0.31rem, calc(0.09rem + 0.45vw), 0.63rem);
+$space-2xs: clamp(0.56rem, calc(0.12rem + 0.89vw), 1.19rem);
+$space-xs: clamp(0.88rem, calc(0.21rem + 1.34vw), 1.81rem);
+$space-s: clamp(1.13rem, calc(0.23rem + 1.79vw), 2.38rem);
+$space-m: clamp(1.69rem, calc(0.35rem + 2.68vw), 3.56rem);
+$space-l: clamp(2.25rem, calc(0.46rem + 3.57vw), 4.75rem);
+$space-xl: clamp(3.38rem, calc(0.7rem + 5.36vw), 7.13rem);
+$space-2xl: clamp(4.5rem, calc(0.93rem + 7.14vw), 9.5rem);
+$space-3xl: clamp(6.75rem, calc(1.39rem + 10.71vw), 14.25rem);

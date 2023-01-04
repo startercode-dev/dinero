@@ -1,0 +1,61 @@
+@use '../helper' as *;
+
+.hero {
+    width: min(85%, 192rem);
+    height: $docHeight;
+    margin-inline: auto;
+    align-items: center;
+    grid-auto-rows: 3fr 1fr;
+    // background-color: lightcyan;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        margin-inline: auto;
+        background-color: darkgrey;
+    }
+
+    &__main {
+        width: 95%;
+        margin-inline: auto;
+    }
+
+    .title {
+        flex: 1;
+        font-family: $playfair;
+        font-size: $step-5;
+        line-height: 1.05;
+        margin: 2rem 0 7rem;
+    }
+
+    .description {
+        flex: 1;
+        text-align: center;
+        margin: 2rem 0 7rem;
+        gap: 1rem;
+
+        p {
+            font-family: $playfair;
+            align-self: end;
+            font-size: $step--1;
+            letter-spacing: 1.5px;
+        }
+    }
+
+    .cta {
+        font-family: $urbanist;
+        font-size: $step-0;
+        justify-content: center;
+
+        a {
+            align-self: center;
+            padding: 0 $space-l;
+        }
+    }
+
+    @media (width <= 85rem) {
+        .title {
+            font-size: $step-4;
+        }
+    }
+}

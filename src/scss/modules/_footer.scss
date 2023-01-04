@@ -1,0 +1,43 @@
+@use '../helper' as *;
+
+.footer {
+    justify-content: space-around;
+    padding: $space-l 0;
+    background-color: $brown;
+    color: #fff;
+
+    &__logo {
+        font-family: $urbanist;
+        font-size: $step-0;
+        span {
+            font-family: $playfair;
+            letter-spacing: $space-2xs;
+        }
+    }
+
+    &__socials {
+        font-size: $step-1;
+        gap: $space-l;
+        margin: $space-2xs 0;
+    }
+
+    &__copyright {
+        font-family: $urbanist;
+        font-size: $step--2;
+    }
+
+    &__nav {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        font-family: $urbanist;
+    }
+
+    .menu-title {
+        font-size: $step--1;
+        font-weight: 700;
+    }
+
+    .menu-item {
+        font-size: calc($step--1 - 0.2rem);
+    }
+}

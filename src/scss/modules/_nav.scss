@@ -1,1 +1,32 @@
 @use '../helper' as *;
+
+.nav {
+    width: 100%;
+    padding: $space-s 4%;
+    justify-content: space-between;
+    font-family: $urbanist;
+
+    &__logo {
+        font-size: $step--1;
+        span {
+            font-family: $playfair;
+            letter-spacing: $space-2xs;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: $playfair;
+        font-size: $step--1;
+        letter-spacing: 0.3rem;
+        gap: $space-l;
+    }
+
+    &__auth {
+        font-size: $step--1;
+        letter-spacing: 0.3rem;
+        gap: $space-m;
+    }
+}

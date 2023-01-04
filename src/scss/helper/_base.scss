@@ -1,3 +1,5 @@
+@use '../helper/variables' as *;
+
 *,
 *::before,
 *::after {
@@ -17,8 +19,7 @@ html {
 body {
     min-height: 100%;
     font-weight: 400;
-    // font-family: 'Playfair Display', serif;
-    // font-family: 'Urbanist', sans-serif;
+    color: $black;
 }
 
 img,
