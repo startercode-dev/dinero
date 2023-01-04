@@ -17,8 +17,8 @@ html {
 body {
     min-height: 100%;
     font-weight: 400;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Urbanist', sans-serif;
+    // font-family: 'Playfair Display', serif;
+    // font-family: 'Urbanist', sans-serif;
 }
 
 img,
@@ -36,6 +36,11 @@ video {
 .flex--column {
     display: flex;
     flex-direction: column;
+}
+
+.flex--row {
+    display: flex;
+    flex-direction: row;
 }
 
 .space-between {

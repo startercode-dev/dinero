@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100%;
+  font-weight: 400;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5cols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn--small, .btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+.stats {
+  background: #636363;
+  padding: 3rem 0;
+  color: #fff;
+  justify-content: center;
+  margin-bottom: 12.8rem;
+}
+.stats__line-space {
+  background: #fff;
+  width: 0.25rem;
+  margin: 0 6rem;
+}
+.stats__item {
+  background: #636363;
+}
+.stats .item-header {
+  font-family: "Urbanist", sans-serif;
+  font-size: 3.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5;
+}
+.stats .item-description {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.5;
+}
+
+.features {
+  margin-inline: auto;
+  width: min(85%, 192rem);
+  background: blue;
+  align-items: center;
+  margin-bottom: 9.6rem;
+}
+.features__cards {
+  width: min(65vw, 90rem);
+  width: rem;
+  background: green;
+  gap: 7rem;
+  margin-bottom: 9.6rem;
+}
+.features .card {
+  box-shadow: 0px 0px 3px 1px #d0d0d0;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.features .card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.features .card-description {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.features__learn-more {
+  font-family: "Urbanist", sans-serif;
+  border: 1.5px solid #92795a;
+  border-radius: 5px;
+  color: #92795a;
+  font-size: 2rem;
+  letter-spacing: 5;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+  display: inline-block;
+}
+
+.contact {
+  padding-top: 4.8rem;
+  padding-bottom: 9.6rem;
+  justify-content: center;
+  background-image: url(/src/img/contact-us-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.contact__container {
+  width: 75rem;
+}
+.contact .title {
+  font-family: "Playfair Display", serif;
+  font-size: 4.4rem;
+  font-weight: 200;
+  margin-bottom: 2.4rem;
+}
+.contact .img {
+  border-radius: 5px;
+  margin-bottom: 2.4rem;
+}
+.contact .inputs {
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+  row-gap: 2.5rem;
+  align-items: start;
+}
+.contact .input {
+  display: flex;
+  flex-direction: column;
+}
+.contact .input label {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.contact .input input,
+.contact .input textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  resize: none;
+  font-size: 1.6rem;
+  padding: 0.3rem 0;
+  background: rgba(255, 255, 255, 0);
+}
+.contact .email {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.contact .message {
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.contact .input-submit-box {
+  justify-content: center;
+  align-self: end;
+}
+.contact .submit {
+  font-family: "Urbanist", sans-serif;
+  border: 1.5px solid #92795a;
+  border-radius: 5px;
+  color: #92795a;
+  font-size: 2rem;
+  letter-spacing: 5;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */

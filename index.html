@@ -19,11 +19,97 @@
   </head>
   <body>
     <nav class="nav-bar"></nav>
-    <section class="hero-section"></section>
-    <section class="stats-section"></section>
-    <section class="features-section"></section>
-    <section class="pricing-section"></section>
-    <section class="contact-section"></section>
+    <section class="hero"></section>
+    <section class="stats flex--row">
+      <div class="stats__item">
+        <h3 class="item-header">$38 billion</h3>
+        <p class="item-description">24th trading volume on exchange</p>
+      </div>
+      <div class="stats__line-space"></div>
+      <div class="stats__item">
+        <h3 class="item-header">120 million</h3>
+        <p class="item-description">Registered users</p>
+      </div>
+      <div class="stats__line-space"></div>
+      <div class="stats__item">
+        <h3 class="item-header">350+</h3>
+        <p class="item-description">Stocks and Cryptocurrencies listed</p>
+      </div>
+      <div class="stats__line-space"></div>
+      <div class="stats__item">
+        <h3 class="item-header"><0.10%</h3>
+        <p class="item-description">Lowest transaction fees</p>
+      </div>
+    </section>
+    <section class="features flex--column">
+      <div class="features__cards grid grid--3cols">
+        <div class="card">
+          <img class="card-img" src="/src/img/feature-1.jpg" alt="piggy bank" />
+          <h3 class="card-title">Easy</h3>
+          <p class="card-description">
+            Get started with as little as $10 and use our top-rated mobile app
+            to invest on the go.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Optimized</h3>
+          <p class="card-description">
+            We put the robots to work for you, with automated tools and
+            strategies that can help unlock your money’s potential.
+          </p>
+          <img
+            class="card-img"
+            src="/src/img/feature-2.jpg"
+            alt="iphone of investment profits"
+          />
+        </div>
+        <div class="card">
+          <img
+            class="card-img"
+            src="/src/img/feature-3.jpg"
+            alt="lady on the phone"
+          />
+          <h3 class="card-title">Personalized</h3>
+          <p class="card-description">
+            Customize your account. Be as hands on as you want, or with our
+            guidance along the way.
+          </p>
+        </div>
+      </div>
+      <a href="/" class="link features__learn-more">Learn More</a>
+    </section>
+    <section class="pricing"></section>
+    <section class="contact flex--row">
+      <div class="contact__container">
+        <h2 class="title">Get in touch with us</h2>
+        <img
+          class="img"
+          src="/src/img/contact-us-img.jpg"
+          alt="Business man reading newspaper"
+        />
+        <div class="inputs grid--2cols">
+          <div class="input name">
+            <label for="name">Name</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="input email">
+            <label for="email">Email</label>
+            <input id="email" type="text" />
+          </div>
+          <div class="input phone">
+            <label for="phone">Phone</label>
+            <input id="phone" type="text" />
+          </div>
+          <div class="input message">
+            <label for="message">Message</label>
+            <textarea name="message" id="phone" cols="30" rows="7"></textarea>
+          </div>
+          <div class="input-submit-box flex">
+            <a href="/" class="link submit">Submit</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
