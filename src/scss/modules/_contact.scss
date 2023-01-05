@@ -1,8 +1,8 @@
 @use '../helper' as *;
 
 .contact {
-    padding-top: 4.8rem;
-    padding-bottom: 9.6rem;
+    padding-top: $space-xl;
+    padding-bottom: $space-3xl;
     justify-content: center;
     background-image: url(/src/img/contact-us-background.jpg);
     background-size: cover;
@@ -10,19 +10,19 @@
     background-position: center center;
 
     &__container {
-        width: 75rem;
+        width: min(90%, 120rem);
     }
 
     .title {
         font-family: $playfair;
-        font-size: 4.4rem;
+        font-size: $step-3;
         font-weight: 200;
-        margin-bottom: 2.4rem;
+        margin-bottom: $space-m;
     }
 
     .img {
         border-radius: 5px;
-        margin-bottom: 2.4rem;
+        margin-bottom: $space-m;
     }
 
     .inputs {
@@ -39,7 +39,7 @@
     .input label {
         font-family: $urbanist;
         font-weight: 300;
-        font-size: 1.8rem;
+        font-size: $step-1;
     }
 
     .input input,
@@ -48,8 +48,8 @@
         border: none;
         border-bottom: 1px solid #000;
         resize: none;
-        font-size: 1.6rem;
-        padding: 0.3rem 0;
+        font-size: $step-1;
+        padding: $space-2xs 0;
         background: rgba(255, 255, 255, 0);
     }
 

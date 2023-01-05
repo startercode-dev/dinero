@@ -5,46 +5,34 @@
     width: min(85%, 192rem);
     align-items: center;
     margin-bottom: 9.6rem;
-    // background: blue;
 
     &__cards {
-        width: min(65vw, 90rem);
-        width: rem;
-        // background: green;
-        gap: 7rem;
+        width: min(85%);
+        gap: $space-xl;
         margin-bottom: 9.6rem;
     }
 
     .card {
         box-shadow: 0px 0px 3px 1px #d0d0d0;
-        padding: 3.2rem;
+        padding: $space-l;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: $space-s;
     }
 
     .card-title {
         font-family: $playfair;
-        font-size: 2.4rem;
+        font-size: $step-1;
         font-weight: 400;
     }
 
     .card-description {
         font-family: $urbanist;
-        font-size: 1.4rem;
+        font-size: $step-0;
         font-weight: 300;
     }
 
     &__learn-more {
         @include link-style;
-        // font-family: var.$urbanist;
-        // border: 1.5px solid #92795a;
-        // border-radius: 5px;
-        // color: #92795a;
-        // font-size: 2rem;
-        // letter-spacing: 5;
-        // font-weight: 500;
-        // margin: 0 auto;
-        // padding: 1rem 5rem;
     }
 }
