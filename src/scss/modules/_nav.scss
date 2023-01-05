@@ -2,12 +2,19 @@
 
 .nav {
     width: 100%;
+    font-family: $urbanist;
     padding: $space-s 4%;
     justify-content: space-between;
-    font-family: $urbanist;
+    align-items: center;
+
+    i {
+        display: none;
+    }
 
     &__logo {
+        // position: relative;
         font-size: $step--1;
+
         span {
             font-family: $playfair;
             letter-spacing: $space-2xs;
@@ -22,11 +29,63 @@
         font-size: $step--1;
         letter-spacing: 0.3rem;
         gap: $space-l;
+
+        a {
+            color: $black;
+        }
     }
 
     &__auth {
         font-size: $step--1;
         letter-spacing: 0.3rem;
         gap: $space-m;
+        align-items: center;
+    }
+
+    .signup {
+        border: 1.5px solid $gold;
+        border-radius: 5px;
+        color: $gold;
+        padding: $space-3xs $space-xs;
+    }
+
+    @media (width <= 43.75rem) {
+        &__menu {
+            gap: $space-s;
+        }
+
+        &__auth {
+            gap: $space-xs;
+        }
+    }
+
+    @media (width <= 32.5rem) {
+        &__logo {
+            font-size: 1.2rem;
+
+            span {
+                font-family: $playfair;
+                letter-spacing: $space-2xs;
+            }
+        }
+
+        &__auth {
+            font-size: 1.2rem;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        i {
+            display: block;
+            transform: translate(20%, 20%);
+        }
+
+        .signup {
+            border: 1px solid $gold;
+            border-radius: 5px;
+            padding: 0.3rem 1rem;
+        }
     }
 }

@@ -1,10 +1,10 @@
-@use 'variables' as *;
+@use './variables' as *;
 
 @mixin link-style {
     font-family: $urbanist;
-    border: 1.5px solid #92795a;
+    border: 1.5px solid $gold;
     border-radius: 5px;
-    color: #92795a !important;
+    color: $gold !important;
     font-size: $step-1;
     letter-spacing: 5;
     font-weight: 500;
