@@ -50,13 +50,41 @@
 
         a {
             align-self: center;
-            padding: 0 $space-l;
+            padding: $space-3xs $space-l;
         }
+    }
+
+    .cta-signup {
+        border: 1.2px solid $gold;
+        border-radius: 5px;
+        color: $gold;
+        font-weight: 600;
     }
 
     @media (width <= 85rem) {
         .title {
+            font-size: calc($step-5 - 1.5rem);
+        }
+    }
+
+    @media (width <= 52.5rem) {
+        .title {
             font-size: $step-4;
+        }
+    }
+
+    @media (width <= 32.5rem) {
+        .description {
+            p {
+                font-size: 0.8rem;
+                letter-spacing: 1.2;
+            }
+        }
+
+        .cta {
+            a {
+                padding: 0 $space-s;
+            }
         }
     }
 }

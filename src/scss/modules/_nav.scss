@@ -12,7 +12,6 @@
     }
 
     &__logo {
-        // position: relative;
         font-size: $step--1;
 
         span {
@@ -47,10 +46,16 @@
         border-radius: 5px;
         color: $gold;
         padding: $space-3xs $space-xs;
+        font-weight: 600;
     }
 
     @media (width <= 43.75rem) {
+        &__logo {
+            font-size: $step-0;
+        }
+
         &__menu {
+            font-size: calc($step-0 - 0.05rem);
             gap: $space-s;
         }
 
@@ -61,12 +66,7 @@
 
     @media (width <= 32.5rem) {
         &__logo {
-            font-size: 1.2rem;
-
-            span {
-                font-family: $playfair;
-                letter-spacing: $space-2xs;
-            }
+            font-size: 1.6rem;
         }
 
         &__auth {
