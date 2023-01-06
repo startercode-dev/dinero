@@ -3,7 +3,7 @@
 .pricing {
     margin-top: 6rem;
     margin-bottom: 6rem;
-    width: min(65%, 192rem);
+    width: min(80%, 144rem);
     margin-inline: auto;
     gap: $space-m;
     // background-color: darkseagreen;
@@ -29,15 +29,24 @@
     }
 
     &__cards {
-        width: min(65vw, 88rem);
+        width: min(100%, 90rem);
         justify-self: center;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
         gap: $space-xl;
     }
 
     .card {
         border: 1px solid #000;
-        padding: $space-s $space-m;
-        gap: 1rem;
+        padding: calc($space-xl - 1rem) $space-l;
+        border-radius: 5px;
+        gap: $space-xl;
+        align-items: center;
+        grid-template-rows: 5fr 1fr;
+
+        .container {
+            gap: 2rem;
+        }
     }
 
     .card-price {
@@ -75,10 +84,73 @@
 
         font-family: $urbanist;
         font-size: $step--1;
-        letter-spacing: 5;
+        letter-spacing: 4;
+        font-weight: 600;
 
-        border: 1px solid #000;
-        padding: $space-2xs $space-l;
-        margin-top: $space-m;
+        border: 1.5px solid $gold;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        padding: $space-2xs 0;
+        color: $gold;
+    }
+
+    .card.premium {
+        background-color: $brown;
+        color: #fff;
+
+        .card-cta {
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+
+    @media (width <= 49rem) {
+        &__cards {
+            grid-auto-flow: row;
+            grid-auto-rows: 1fr;
+            width: max(25rem, 65%);
+        }
+
+        .card {
+            gap: $space-l;
+            .container {
+                gap: $space-m;
+            }
+        }
+
+        .card-price {
+            font-size: $step-1;
+            span {
+                font-size: $step-4;
+            }
+        }
+
+        .card-title {
+            font-size: $step-2;
+        }
+
+        .card-description {
+            font-size: $step-0;
+        }
+
+        .card-list {
+            font-size: $step-0;
+        }
+
+        .card-cta {
+            font-size: $step-0;
+            padding: $space-xs 0;
+        }
+    }
+
+    @media (width <= 43.75rem) {
+        h2 {
+            font-size: $step-3;
+        }
+
+        &__options {
+            font-size: $step-1;
+        }
     }
 }
