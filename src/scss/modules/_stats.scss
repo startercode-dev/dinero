@@ -2,10 +2,13 @@
 
 .stats {
     background: #636363;
-    padding: $space-l 0;
-    color: #fff;
     justify-content: center;
-    margin-bottom: 12.8rem;
+    margin-bottom: calc($space-3xl + 4rem);
+
+    &__container {
+        padding: $space-l 0;
+        color: #fff;
+    }
 
     &__line-space {
         background: #fff;
@@ -31,4 +34,16 @@
         font-weight: 100;
         letter-spacing: 0.5;
     }
+
+    @include media-stats(
+        120rem,
+        $space-2xl,
+        $step-2,
+        $step--1,
+        $space-xl,
+        0.2rem
+    );
+    @include media-stats(90rem, $space-xl, $step-1, $step--2, $space-l, 0.3rem);
+    @include media-stats(54rem, $space-l, $step-0, $step--3, $space-m, 0.3rem);
+    @include media-stats(34rem, $space-m, 0.94rem, 0.54rem, 1.13rem, 0.3rem);
 }
