@@ -112,46 +112,93 @@
 
     @media (width <= 54rem) {
         @include media-contact(
-            $space-s,
-            $space-xl,
-            50vw,
-            $step-0,
-            $space-2xs,
-            3px,
-            $space-s,
-            $space-3xs,
+            4.75rem,
+            7.13rem,
+            41.5rem,
+            3.17rem,
+            3.2rem,
+            4px,
+            3.56rem,
+            1.19rem,
             calc($space-3xs - 0.3rem),
-            $step--2
+            1.78rem
         );
 
+        .inputs {
+            grid-template-columns: 1fr;
+            row-gap: 1.81rem;
+        }
+
+        .input input,
+        .input textarea {
+            padding: calc($space-3xs - 0.1rem) 0;
+        }
+
+        .email {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .message {
+            grid-column: 1/2;
+            grid-row: 4/6;
+            margin-bottom: 4.75rem;
+        }
+
         .submit {
-            @include link-style(
-                $step--1,
-                cal($space-2xs, 0.5rem),
-                $space-m,
-                2,
-                1px,
-                3px
-            );
+            @include link-style(1.78rem, 0.8rem, 4.95rem, 4, 1.5px, 5px);
         }
     }
 
     @media (width <= 34rem) {
         @include media-contact(
-            $space-xs,
-            $space-l,
-            50vw,
-            $step--1,
-            $space-3xs,
-            2px,
-            $space-xs,
-            $space-3xs,
+            3.56rem,
+            4.75rem,
+            30rem,
+            2.38rem,
+            1.78rem,
+            4px,
+            2.38rem,
+            0.63rem,
             calc($space-3xs - 0.3rem),
-            $step--3
+            1.34rem
         );
 
+        .inputs {
+            grid-template-columns: 1fr;
+            row-gap: 1.19rem;
+        }
+
+        .input input,
+        .input textarea {
+            padding: calc($space-3xs - 0.1rem) 0;
+        }
+
+        .message {
+            margin-bottom: 3.56rem;
+        }
+
         .submit {
-            @include link-style($step--3, $space-2xs, $space-l, 1, 0.5px, 2px);
+            @include link-style(1.34rem, 0.56rem, 3.56rem, 3, 1px, 4px);
         }
     }
+
+    // @media (width <= 34rem) {
+    //     @include media-contact(
+    //         $space-xs,
+    //         $space-l,
+    //         50vw,
+    //         $step--1,
+    //         $space-3xs,
+    //         2px,
+    //         $space-xs,
+    //         $space-3xs,
+    //         calc($space-3xs - 0.3rem),
+    //         $step--3
+    //     );
+
+    //     .submit {
+    //         @include link-style($step--3, $space-2xs, $space-l, 1, 0.5px, 2px);
+    //     }
+    // }
 }

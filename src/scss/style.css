@@ -279,14 +279,33 @@ video {
     margin-bottom: calc(clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem) + 4rem);
   }
   .stats .item-header {
-    font-size: calc(clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem) + 0.5rem);
+    font-size: 3.67rem;
   }
   .stats .item-description {
-    font-size: calc(clamp(0.65rem, 0.4rem + 0.5vw, 1rem) - 0.2rem);
+    font-size: 1.14rem;
   }
   .stats__line-space {
     margin: 0 calc(clamp(1.69rem, 0.35rem + 2.68vw, 3.56rem) + 1rem);
     width: calc(clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem) - 0.3rem);
+  }
+}
+@media (width <= 54rem) {
+  .stats__container {
+    width: 80%;
+    height: 25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    align-items: center;
+  }
+  .stats__line-space {
+    display: none;
+  }
+  .stats .item-header {
+    text-align: center;
+  }
+  .stats .item-description {
+    text-align: center;
   }
 }
 @media (width <= 34rem) {
@@ -294,10 +313,10 @@ video {
     margin-bottom: calc(clamp(1.69rem, 0.35rem + 2.68vw, 3.56rem) + 4rem);
   }
   .stats .item-header {
-    font-size: 1.44rem;
+    font-size: 2.88rem;
   }
   .stats .item-description {
-    font-size: 0.34rem;
+    font-size: 0.8rem;
   }
   .stats__line-space {
     margin: 0 2.13rem;
@@ -346,7 +365,7 @@ video {
 }
 @media (width <= 120rem) {
   .features__cards {
-    margin-bottom: calc(clamp(3.38rem, 0.7rem + 5.36vw, 7.13rem) + 5rem);
+    margin-bottom: calc(clamp(3.38rem, 0.7rem + 5.36vw, 7.13rem) + 4rem);
   }
   .features .card-title {
     font-size: clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem);
@@ -373,7 +392,7 @@ video {
 }
 @media (width <= 90rem) {
   .features__cards {
-    margin-bottom: calc(clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem) + 5rem);
+    margin-bottom: calc(clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem) + 4rem);
   }
   .features .card-title {
     font-size: clamp(0.94rem, 0.33rem + 1.21vw, 1.78rem);
@@ -400,55 +419,59 @@ video {
 }
 @media (width <= 54rem) {
   .features__cards {
-    margin-bottom: calc(clamp(1.69rem, 0.35rem + 2.68vw, 3.56rem) + 5rem);
-  }
-  .features .card-title {
-    font-size: clamp(0.78rem, 0.38rem + 0.79vw, 1.34rem);
-  }
-  .features .card-description {
-    font-size: clamp(0.65rem, 0.4rem + 0.5vw, 1rem);
+    grid-template-columns: 1fr;
+    width: 40rem;
+    gap: 7rem;
   }
   .features .card {
-    padding: clamp(0.88rem, 0.21rem + 1.34vw, 1.81rem);
-    gap: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem);
+    padding: 3.5rem;
+    gap: 2rem;
+  }
+  .features .card-title {
+    font-size: 3.17rem;
+  }
+  .features .card-description {
+    font-size: 1.78rem;
   }
   .features__learn-more {
     font-family: "Urbanist", sans-serif;
-    border: 1px solid #92795a;
+    border: 1.5px solid #92795a;
     color: #92795a !important;
-    border-radius: 3px;
-    font-size: clamp(0.94rem, 0.33rem + 1.21vw, 1.78rem);
+    border-radius: 5px;
+    font-size: 1.78rem;
     font-weight: 500;
     margin: 0 auto;
-    padding: cal(clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem), 0.5rem) clamp(1.69rem, 0.35rem + 2.68vw, 3.56rem);
-    letter-spacing: 2;
+    padding: 0.8rem 4.95rem;
+    letter-spacing: 4;
     display: inline-block;
   }
 }
 @media (width <= 34rem) {
   .features__cards {
-    margin-bottom: 6.13rem;
-  }
-  .features .card-title {
-    font-size: 0.65rem;
-  }
-  .features .card-description {
-    font-size: 0.54rem;
+    grid-template-columns: 1fr;
+    width: 30rem;
+    gap: 7rem;
   }
   .features .card {
-    padding: 0.56rem;
-    gap: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem);
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+  .features .card-title {
+    font-size: 2.38rem;
+  }
+  .features .card-description {
+    font-size: 1.34rem;
   }
   .features__learn-more {
     font-family: "Urbanist", sans-serif;
-    border: 0.5px solid #92795a;
+    border: 1px solid #92795a;
     color: #92795a !important;
-    border-radius: 2px;
-    font-size: clamp(0.65rem, 0.4rem + 0.5vw, 1rem);
+    border-radius: 4px;
+    font-size: 1.34rem;
     font-weight: 500;
     margin: 0 auto;
-    padding: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem) clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem);
-    letter-spacing: 1;
+    padding: 0.56rem 3.56rem;
+    letter-spacing: 3;
     display: inline-block;
   }
 }
@@ -679,85 +702,113 @@ video {
 }
 @media (width <= 54rem) {
   .contact {
-    padding-top: clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem);
-    padding-bottom: clamp(3.38rem, 0.7rem + 5.36vw, 7.13rem);
+    padding-top: 4.75rem;
+    padding-bottom: 7.13rem;
   }
   .contact__container {
-    width: min(90%, 50vw);
+    width: min(90%, 41.5rem);
   }
   .contact .title {
-    font-size: clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem);
-    margin-bottom: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem);
+    font-size: 3.17rem;
+    margin-bottom: 3.2rem;
   }
   .contact .img {
-    margin-bottom: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem);
-    border-radius: 3px;
+    margin-bottom: 3.2rem;
+    border-radius: 4px;
   }
   .contact .inputs {
-    -moz-column-gap: clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem);
-         column-gap: clamp(1.13rem, 0.23rem + 1.79vw, 2.38rem);
-    row-gap: clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem);
+    -moz-column-gap: 3.56rem;
+         column-gap: 3.56rem;
+    row-gap: 1.19rem;
   }
   .contact .input label {
-    font-size: clamp(0.78rem, 0.38rem + 0.79vw, 1.34rem);
+    font-size: 1.78rem;
   }
   .contact .input input,
 .contact .input textarea {
     padding: calc(clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem) - 0.3rem) 0;
-    font-size: clamp(0.78rem, 0.38rem + 0.79vw, 1.34rem);
+    font-size: 1.78rem;
+  }
+  .contact .inputs {
+    grid-template-columns: 1fr;
+    row-gap: 1.81rem;
+  }
+  .contact .input input,
+.contact .input textarea {
+    padding: calc(clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem) - 0.1rem) 0;
+  }
+  .contact .email {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .contact .message {
+    grid-column: 1/2;
+    grid-row: 4/6;
+    margin-bottom: 4.75rem;
   }
   .contact .submit {
     font-family: "Urbanist", sans-serif;
-    border: 1px solid #92795a;
+    border: 1.5px solid #92795a;
     color: #92795a !important;
-    border-radius: 3px;
-    font-size: clamp(0.94rem, 0.33rem + 1.21vw, 1.78rem);
+    border-radius: 5px;
+    font-size: 1.78rem;
     font-weight: 500;
     margin: 0 auto;
-    padding: cal(clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem), 0.5rem) clamp(1.69rem, 0.35rem + 2.68vw, 3.56rem);
-    letter-spacing: 2;
+    padding: 0.8rem 4.95rem;
+    letter-spacing: 4;
     display: inline-block;
   }
 }
 @media (width <= 34rem) {
   .contact {
-    padding-top: clamp(0.88rem, 0.21rem + 1.34vw, 1.81rem);
-    padding-bottom: clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem);
+    padding-top: 3.56rem;
+    padding-bottom: 4.75rem;
   }
   .contact__container {
-    width: min(90%, 50vw);
+    width: min(90%, 30rem);
   }
   .contact .title {
-    font-size: clamp(0.94rem, 0.33rem + 1.21vw, 1.78rem);
-    margin-bottom: clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem);
+    font-size: 2.38rem;
+    margin-bottom: 1.78rem;
   }
   .contact .img {
-    margin-bottom: clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem);
-    border-radius: 2px;
+    margin-bottom: 1.78rem;
+    border-radius: 4px;
   }
   .contact .inputs {
-    -moz-column-gap: clamp(0.88rem, 0.21rem + 1.34vw, 1.81rem);
-         column-gap: clamp(0.88rem, 0.21rem + 1.34vw, 1.81rem);
-    row-gap: clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem);
+    -moz-column-gap: 2.38rem;
+         column-gap: 2.38rem;
+    row-gap: 0.63rem;
   }
   .contact .input label {
-    font-size: clamp(0.65rem, 0.4rem + 0.5vw, 1rem);
+    font-size: 1.34rem;
   }
   .contact .input input,
 .contact .input textarea {
     padding: calc(clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem) - 0.3rem) 0;
-    font-size: clamp(0.65rem, 0.4rem + 0.5vw, 1rem);
+    font-size: 1.34rem;
+  }
+  .contact .inputs {
+    grid-template-columns: 1fr;
+    row-gap: 1.19rem;
+  }
+  .contact .input input,
+.contact .input textarea {
+    padding: calc(clamp(0.31rem, 0.09rem + 0.45vw, 0.63rem) - 0.1rem) 0;
+  }
+  .contact .message {
+    margin-bottom: 3.56rem;
   }
   .contact .submit {
     font-family: "Urbanist", sans-serif;
-    border: 0.5px solid #92795a;
+    border: 1px solid #92795a;
     color: #92795a !important;
-    border-radius: 2px;
-    font-size: clamp(0.65rem, 0.4rem + 0.5vw, 1rem);
+    border-radius: 4px;
+    font-size: 1.34rem;
     font-weight: 500;
     margin: 0 auto;
-    padding: clamp(0.56rem, 0.12rem + 0.89vw, 1.19rem) clamp(2.25rem, 0.46rem + 3.57vw, 4.75rem);
-    letter-spacing: 1;
+    padding: 0.56rem 3.56rem;
+    letter-spacing: 3;
     display: inline-block;
   }
 }

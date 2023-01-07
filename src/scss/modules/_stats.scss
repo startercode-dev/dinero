@@ -44,6 +44,30 @@
         0.2rem
     );
     @include media-stats(90rem, $space-xl, $step-1, $step--2, $space-l, 0.3rem);
-    @include media-stats(54rem, $space-l, $step-0, $step--3, $space-m, 0.3rem);
-    @include media-stats(34rem, $space-m, 0.94rem, 0.54rem, 1.13rem, 0.3rem);
+
+    @include media-stats(54rem, $space-l, 3.17rem, 1.34rem, $space-m, 0.3rem);
+    @media (width <= 54rem) {
+        &__container {
+            width: min(80%);
+            height: min(25rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 3rem;
+            align-items: center;
+        }
+
+        &__line-space {
+            display: none;
+        }
+
+        .item-header {
+            text-align: center;
+        }
+
+        .item-description {
+            text-align: center;
+        }
+    }
+
+    @include media-stats(34rem, $space-m, 2.38rem, 1rem, 1.13rem, 0.3rem);
 }
