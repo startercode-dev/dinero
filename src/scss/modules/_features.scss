@@ -4,12 +4,11 @@
     margin-inline: auto;
     width: min(85%, 192rem);
     align-items: center;
-    margin-bottom: 9.6rem;
 
     &__cards {
         width: min(85%);
         gap: $space-xl;
-        margin-bottom: 9.6rem;
+        margin-bottom: calc($space-2xl + 5rem);
     }
 
     .card {
@@ -33,6 +32,84 @@
     }
 
     &__learn-more {
-        @include link-style;
+        @include link-style($step-1, $space-xs, $space-2xl, 5, 1.5px, 5px);
+    }
+
+    @media (width <= 120rem) {
+        @include media-features(
+            $space-xl,
+            $step-0,
+            $step--1,
+            $space-m,
+            $space-xs
+        );
+
+        &__learn-more {
+            @include link-style($step-0, $space-2xs, $space-xl, 4, 1.5px, 5px);
+        }
+    }
+
+    @media (width <= 90rem) {
+        @include media-features(
+            $space-l,
+            $step--1,
+            $step--2,
+            $space-s,
+            $space-2xs
+        );
+
+        &__learn-more {
+            @include link-style($step--1, $space-2xs, $space-l, 3, 1.5px, 4px);
+        }
+    }
+
+    @media (width <= 54rem) {
+        &__cards {
+            grid-template-columns: 1fr;
+            width: min(40rem);
+            gap: 7rem;
+        }
+
+        .card {
+            padding: 3.5rem;
+            gap: 2rem;
+        }
+
+        .card-title {
+            font-size: 3.17rem;
+        }
+
+        .card-description {
+            font-size: 1.78rem;
+        }
+
+        &__learn-more {
+            @include link-style(1.78rem, 0.8rem, 4.95rem, 4, 1.5px, 5px);
+        }
+    }
+
+    @media (width <= 34rem) {
+        &__cards {
+            grid-template-columns: 1fr;
+            width: min(30rem);
+            gap: 7rem;
+        }
+
+        .card {
+            padding: 2.5rem;
+            gap: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 2.38rem;
+        }
+
+        .card-description {
+            font-size: 1.34rem;
+        }
+
+        &__learn-more {
+            @include link-style(1.34rem, 0.56rem, 3.56rem, 3, 1px, 4px);
+        }
     }
 }

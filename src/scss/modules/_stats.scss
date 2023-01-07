@@ -2,10 +2,13 @@
 
 .stats {
     background: #636363;
-    padding: $space-l 0;
-    color: #fff;
     justify-content: center;
-    margin-bottom: 12.8rem;
+    margin-bottom: calc($space-3xl + 4rem);
+
+    &__container {
+        padding: $space-l 0;
+        color: #fff;
+    }
 
     &__line-space {
         background: #fff;
@@ -31,4 +34,40 @@
         font-weight: 100;
         letter-spacing: 0.5;
     }
+
+    @include media-stats(
+        120rem,
+        $space-2xl,
+        $step-2,
+        $step--1,
+        $space-xl,
+        0.2rem
+    );
+    @include media-stats(90rem, $space-xl, $step-1, $step--2, $space-l, 0.3rem);
+
+    @include media-stats(54rem, $space-l, 3.17rem, 1.34rem, $space-m, 0.3rem);
+    @media (width <= 54rem) {
+        &__container {
+            width: min(80%);
+            height: min(25rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 3rem;
+            align-items: center;
+        }
+
+        &__line-space {
+            display: none;
+        }
+
+        .item-header {
+            text-align: center;
+        }
+
+        .item-description {
+            text-align: center;
+        }
+    }
+
+    @include media-stats(34rem, $space-m, 2.38rem, 1rem, 1.13rem, 0.3rem);
 }

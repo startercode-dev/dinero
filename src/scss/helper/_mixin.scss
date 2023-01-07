@@ -1,14 +1,100 @@
 @use './variables' as *;
 
-@mixin link-style {
+@mixin link-style($font, $p1, $p2, $ls, $bw, $br) {
     font-family: $urbanist;
-    border: 1.5px solid $gold;
-    border-radius: 5px;
+    border: $bw solid $gold;
     color: $gold !important;
-    font-size: $step-1;
-    letter-spacing: 5;
+    border-radius: $br;
+    font-size: $font;
     font-weight: 500;
     margin: 0 auto;
-    padding: $space-xs $space-2xl;
+    padding: $p1 $p2;
+    letter-spacing: $ls;
     display: inline-block;
+}
+
+//----------------------------
+// MEDIA QUERIES -------------
+//----------------------------
+
+@mixin media-stats($widt, $mb, $title, $description, $line-space, $line-width) {
+    @media (width <= $widt) {
+        margin-bottom: calc($mb + 4rem);
+
+        .item-header {
+            font-size: calc($title + 0.5rem);
+        }
+
+        .item-description {
+            font-size: calc($description - 0.2rem);
+        }
+
+        &__line-space {
+            margin: 0 calc($line-space + 1rem);
+            width: calc($space-3xs - $line-width);
+        }
+    }
+}
+
+@mixin media-features($crd-mb, $font1, $font2, $padding, $gap) {
+    &__cards {
+        margin-bottom: calc($crd-mb + 4rem);
+    }
+    .card-title {
+        font-size: $font1;
+    }
+
+    .card-description {
+        font-size: $font2;
+    }
+
+    .card {
+        padding: $padding;
+        gap: $gap;
+    }
+}
+
+@mixin media-contact(
+    $pt,
+    $pb,
+    $width,
+    $font1,
+    $mb1,
+    $br,
+    $col-gap,
+    $row-gap,
+    $p1,
+    $font2
+) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+
+    &__container {
+        width: min(90%, $width);
+    }
+
+    .title {
+        font-size: $font1;
+        margin-bottom: $mb1;
+    }
+
+    .img {
+        margin-bottom: $mb1;
+        border-radius: $br;
+    }
+
+    .inputs {
+        column-gap: $col-gap;
+        row-gap: $row-gap;
+    }
+
+    .input label {
+        font-size: $font2;
+    }
+
+    .input input,
+    .input textarea {
+        padding: $p1 0;
+        font-size: $font2;
+    }
 }
