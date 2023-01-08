@@ -1,10 +1,16 @@
 @use '../helper' as *;
 
 .footer {
-    justify-content: space-around;
-    padding: $space-l 0;
+    width: 100%;
     background-color: $brown;
     color: #fff;
+
+    .container {
+        width: min(100%, 245rem);
+        justify-content: space-around;
+        margin-inline: auto;
+        padding: $space-l 0;
+    }
 
     &__logo {
         font-family: $urbanist;
@@ -17,7 +23,7 @@
 
     &__socials {
         font-size: $step-1;
-        gap: $space-l;
+        gap: $space-m;
         margin: $space-2xs 0;
     }
 
@@ -32,12 +38,47 @@
         font-family: $urbanist;
     }
 
+    .nav-menu {
+        gap: $space-xs;
+    }
+
     .menu-title {
         font-size: $step--1;
-        font-weight: 700;
+        font-weight: 600;
     }
 
     .menu-item {
         font-size: calc($step--1 - 0.2rem);
+    }
+
+    @media (width <= 49rem) {
+        .container {
+            flex-direction: column;
+            padding: 3rem;
+            gap: 2rem;
+        }
+
+        &__logo {
+            font-size: $step-1;
+        }
+
+        .nav-menu {
+            gap: 1rem;
+        }
+
+        .menu-title {
+            font-size: $step-1;
+            font-weight: 500;
+        }
+
+        .menu-item {
+            font-size: calc($step-1 - 0.2rem);
+        }
+    }
+
+    @media (width <= 32.5rem) {
+        &__socials {
+            gap: $space-s;
+        }
     }
 }
