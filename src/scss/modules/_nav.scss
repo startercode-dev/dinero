@@ -13,12 +13,10 @@
     }
 
     &__logo {
-        font-size: $step--1;
-
-        span {
-            font-family: $playfair;
-            letter-spacing: $space-2xs;
-        }
+        font-size: calc($step--1 - 0.1rem);
+        font-family: 'Vollkorn SC', serif;
+        letter-spacing: calc($space-3xs + 0.2rem);
+        align-items: flex-end;
     }
 
     &__menu {
@@ -80,7 +78,7 @@
 
         i {
             display: block;
-            transform: translate(20%, 20%);
+            transform: translate(20%, 12%);
         }
 
         .signup {
