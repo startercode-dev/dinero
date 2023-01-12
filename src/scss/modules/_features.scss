@@ -6,8 +6,9 @@
     align-items: center;
 
     &__cards {
-        width: min(85%);
-        gap: $space-xl;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: min(85%, 144rem);
+        gap: $space-2xl;
         margin-bottom: calc($space-2xl + 5rem);
     }
 
@@ -32,7 +33,7 @@
     }
 
     &__learn-more {
-        @include link-style($step-1, $space-xs, $space-2xl, 5, 1.5px, 5px);
+        @include link-style($step-0, $space-2xs, $space-2xl, 5, 1.5px, 5px);
     }
 
     @media (width <= 120rem) {
@@ -49,7 +50,7 @@
         }
     }
 
-    @media (width <= 90rem) {
+    @media (width <= 100rem) {
         @include media-features(
             $space-l,
             $step--1,
@@ -58,15 +59,53 @@
             $space-2xs
         );
 
+        &__cards {
+            gap: $space-xl;
+        }
+
         &__learn-more {
             @include link-style($step--1, $space-2xs, $space-l, 3, 1.5px, 4px);
         }
     }
 
-    @media (width <= 54rem) {
+    @media (49rem <= width <= 85rem) {
+        &__cards {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            column-gap: 0;
+        }
+
+        .card {
+            width: 85%;
+            justify-self: center;
+        }
+
+        .card-title {
+            font-size: $step-1;
+        }
+
+        .card-description {
+            font-size: $step--1;
+        }
+
+        .card.first {
+            grid-column: 1/3;
+        }
+
+        .card.last {
+            grid-column: 3/5;
+        }
+
+        .card.middle {
+            grid-row: 2/3;
+            grid-column: 2/4;
+        }
+    }
+
+    @media (width <= 49rem) {
         &__cards {
             grid-template-columns: 1fr;
-            width: min(40rem);
+            width: min(70%, 40rem);
             gap: 7rem;
         }
 
