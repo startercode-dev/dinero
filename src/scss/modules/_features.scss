@@ -68,7 +68,7 @@
         }
     }
 
-    @media (49rem <= width <= 85rem) {
+    @media (width <= 85rem) {
         &__cards {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -105,8 +105,8 @@
     @media (width <= 49rem) {
         &__cards {
             grid-template-columns: 1fr;
-            width: min(70%, 40rem);
-            gap: 7rem;
+            width: min(80%, 90rem);
+            gap: $space-2xl;
         }
 
         .card {
@@ -124,6 +124,19 @@
 
         &__learn-more {
             @include link-style(1.78rem, 0.8rem, 4.95rem, 4, 1.5px, 5px);
+        }
+
+        .card.first {
+            grid-column: 1;
+        }
+
+        .card.last {
+            grid-column: 1;
+        }
+
+        .card.middle {
+            grid-row: 1;
+            grid-column: 1;
         }
     }
 
