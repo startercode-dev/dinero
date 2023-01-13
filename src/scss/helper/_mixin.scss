@@ -17,9 +17,9 @@
 // MEDIA QUERIES -------------
 //----------------------------
 
-@mixin media-stats($widt, $mb, $title, $description, $line-space, $line-width) {
+@mixin media-stats($widt, $title, $description, $line-space, $line-width) {
     @media (width <= $widt) {
-        margin-bottom: calc($mb + 4rem);
+        // margin-bottom: calc($mb + 4rem);
 
         .item-header {
             font-size: calc($title + 0.5rem);
@@ -36,7 +36,8 @@
     }
 }
 
-@mixin media-features($crd-mb, $font1, $font2, $padding, $gap) {
+@mixin media-features($pt, $crd-mb, $font1, $font2, $padding, $gap) {
+    padding-top: calc($pt + 4rem);
     &__cards {
         margin-bottom: calc($crd-mb + 4rem);
     }

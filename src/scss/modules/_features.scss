@@ -4,6 +4,7 @@
     margin-inline: auto;
     width: min(85%, 192rem);
     align-items: center;
+    padding-top: calc($space-3xl + 4rem);
 
     &__cards {
         grid-template-columns: 1fr 1fr 1fr;
@@ -38,6 +39,7 @@
 
     @media (width <= 120rem) {
         @include media-features(
+            $space-2xl,
             $space-xl,
             $step-0,
             $step--1,
@@ -52,6 +54,7 @@
 
     @media (width <= 100rem) {
         @include media-features(
+            $space-xl,
             $space-l,
             $step--1,
             $step--2,
@@ -103,6 +106,7 @@
     }
 
     @media (width <= 49rem) {
+        padding-top: calc($space-l + 4rem);
         &__cards {
             grid-template-columns: 1fr;
             width: min(80%, 90rem);
@@ -141,6 +145,7 @@
     }
 
     @media (width <= 34rem) {
+        padding-top: calc($space-m + 4rem);
         &__cards {
             grid-template-columns: 1fr;
             width: min(30rem);

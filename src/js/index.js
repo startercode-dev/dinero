@@ -7,3 +7,23 @@ const documentHeight = () => {
 };
 window.addEventListener('resize', documentHeight);
 documentHeight();
+
+// SCROLL TO SECTION UPON CLICKING
+
+const sideHeaderClick = (className, section) => {
+    $(`.${className}`).on('click', () => {
+        section[0].scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+};
+
+sideHeaderClick('cta-signup', $('.contact'));
+sideHeaderClick('menu-values', $('.features'));
+sideHeaderClick('menu-stats', $('.stats'));
+sideHeaderClick('menu-pricing', $('.pricing'));
+sideHeaderClick('login', $('.contact'));
+sideHeaderClick('signup', $('.contact'));
+sideHeaderClick('cta-explore-btn', $('.pricing'));
+sideHeaderClick('features__learn-more', $('.contact'));
+sideHeaderClick('card-cta', $('.contact'));

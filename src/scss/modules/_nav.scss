@@ -40,12 +40,17 @@
         align-items: center;
     }
 
+    .login {
+        cursor: pointer;
+    }
+
     .signup {
         border: 1.5px solid $gold;
         border-radius: 5px;
         color: $gold;
         padding: $space-3xs $space-xs;
         font-weight: 600;
+        cursor: pointer;
     }
 
     @media (width <= 43.75rem) {
