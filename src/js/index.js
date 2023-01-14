@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $, { each } from 'jquery';
 
 const documentHeight = () => {
     const doc = document.documentElement;
@@ -8,22 +8,60 @@ const documentHeight = () => {
 window.addEventListener('resize', documentHeight);
 documentHeight();
 
-// SCROLL TO SECTION UPON CLICKING
+//---------------------------------
+// CLICK SCROLLING
+//---------------------------------
 
-const sideHeaderClick = (className, section) => {
+const clickScroll = (className, section) => {
+    //click and scrolling to the selected section
     $(`.${className}`).on('click', () => {
-        section[0].scrollIntoView({
+        $(`.${section}`)[0].scrollIntoView({
             behavior: 'smooth',
         });
     });
 };
 
-sideHeaderClick('cta-signup', $('.contact'));
-sideHeaderClick('menu-values', $('.features'));
-sideHeaderClick('menu-stats', $('.stats'));
-sideHeaderClick('menu-pricing', $('.pricing'));
-sideHeaderClick('login', $('.contact'));
-sideHeaderClick('signup', $('.contact'));
-sideHeaderClick('cta-explore-btn', $('.pricing'));
-sideHeaderClick('features__learn-more', $('.contact'));
-sideHeaderClick('card-cta', $('.contact'));
+clickScroll('cta-signup', 'contact');
+clickScroll('menu-values', 'features');
+clickScroll('menu-stats', 'stats');
+clickScroll('menu-pricing', 'pricing');
+clickScroll('login', 'contact');
+clickScroll('signup', 'contact');
+clickScroll('cta-explore-btn', 'pricing');
+clickScroll('features__learn-more', 'contact');
+clickScroll('card-cta', 'contact');
+
+//---------------------------------
+// FEATURES ANIMATION
+//---------------------------------
+
+const loadAnimations = (threshold) => {
+    //faciliates page loading animation
+    const loadSection = (elem) => {
+        if (elem.hasClass('section--hidden')) {
+            elem.removeClass('section--hidden');
+        }
+    };
+
+    const setAnimationObserver = (elem) => {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries;
+                if (entry.intersectionRatio >= threshold) {
+                    loadSection(elem);
+                }
+            },
+            {
+                threshold,
+            }
+        );
+        sectionObserver.observe(elem[0]);
+    };
+
+    $('.animate').each((i, elem) => {
+        $(elem).addClass('section--hidden');
+        setAnimationObserver($(elem));
+    });
+};
+
+loadAnimations(0.3);

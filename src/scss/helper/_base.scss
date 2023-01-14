@@ -75,3 +75,14 @@ video {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+
+//ANIMATION
+
+.section--hidden {
+    transform: translateY(10%);
+    opacity: 0;
+}
+
+.animate {
+    transition: all 0.5s;
+}
