@@ -20,6 +20,7 @@ body {
     min-height: 100%;
     font-weight: 400;
     color: $black;
+    position: relative;
 }
 
 img,
@@ -28,6 +29,10 @@ svg,
 video {
     display: block;
     max-width: 100%;
+}
+
+ul {
+    list-style: none;
 }
 
 .flex {
@@ -50,6 +55,10 @@ video {
 
 .center {
     justify-content: center;
+}
+
+.fixed {
+    position: fixed;
 }
 
 .grid {
@@ -85,4 +94,10 @@ video {
 
 .animate {
     transition: all 0.5s;
+}
+
+//MISC
+
+.pt-35 {
+    padding-top: 4.63rem;
 }

@@ -1,95 +1,95 @@
-@use '../helper' as *;
+// @use '../helper' as *;
 
-.nav {
-    width: min(100%, 245rem);
-    font-family: $urbanist;
-    padding: $space-s 4%;
-    margin-inline: auto;
-    justify-content: space-between;
-    align-items: center;
+// .nav {
+//     width: min(100%, 245rem);
+//     font-family: $urbanist;
+//     padding: $space-s 4%;
+//     margin-inline: auto;
+//     justify-content: space-between;
+//     align-items: center;
 
-    i {
-        display: none;
-    }
+//     i {
+//         display: none;
+//     }
 
-    &__logo {
-        font-size: calc($step--1 - 0.1rem);
-        font-family: 'Vollkorn SC', serif;
-        letter-spacing: calc($space-3xs + 0.2rem);
-        align-items: flex-end;
-    }
+//     &__logo {
+//         font-size: calc($step--1 - 0.1rem);
+//         font-family: 'Vollkorn SC', serif;
+//         letter-spacing: calc($space-3xs + 0.2rem);
+//         align-items: flex-end;
+//     }
 
-    &__menu {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        font-family: $playfair;
-        font-size: $step--1;
-        letter-spacing: 0.3rem;
-        gap: $space-l;
+//     &__menu {
+//         position: absolute;
+//         left: 50%;
+//         transform: translate(-50%);
+//         font-family: $playfair;
+//         font-size: $step--1;
+//         letter-spacing: 0.3rem;
+//         gap: $space-l;
 
-        a {
-            color: $black;
-        }
-    }
+//         a {
+//             color: $black;
+//         }
+//     }
 
-    &__auth {
-        font-size: $step--1;
-        letter-spacing: 0.3rem;
-        gap: $space-m;
-        align-items: center;
-    }
+//     &__auth {
+//         font-size: $step--1;
+//         letter-spacing: 0.3rem;
+//         gap: $space-m;
+//         align-items: center;
+//     }
 
-    .login {
-        cursor: pointer;
-    }
+//     .login {
+//         cursor: pointer;
+//     }
 
-    .signup {
-        border: 1.5px solid $gold;
-        border-radius: 5px;
-        color: $gold;
-        padding: $space-3xs $space-xs;
-        font-weight: 600;
-        cursor: pointer;
-    }
+//     .signup {
+//         border: 1.5px solid $gold;
+//         border-radius: 5px;
+//         color: $gold;
+//         padding: $space-3xs $space-xs;
+//         font-weight: 600;
+//         cursor: pointer;
+//     }
 
-    @media (width <= 43.75rem) {
-        &__logo {
-            font-size: $step-0;
-        }
+//     @media (width <= 43.75rem) {
+//         &__logo {
+//             font-size: $step-0;
+//         }
 
-        &__menu {
-            font-size: calc($step-0 - 0.05rem);
-            gap: $space-s;
-        }
+//         &__menu {
+//             font-size: calc($step-0 - 0.05rem);
+//             gap: $space-s;
+//         }
 
-        &__auth {
-            gap: $space-xs;
-        }
-    }
+//         &__auth {
+//             gap: $space-xs;
+//         }
+//     }
 
-    @media (width <= 32.5rem) {
-        &__logo {
-            font-size: 1.6rem;
-        }
+//     @media (width <= 32.5rem) {
+//         &__logo {
+//             font-size: 1.6rem;
+//         }
 
-        &__auth {
-            font-size: 1.2rem;
-        }
+//         &__auth {
+//             font-size: 1.2rem;
+//         }
 
-        &__menu {
-            display: none;
-        }
+//         &__menu {
+//             display: none;
+//         }
 
-        i {
-            display: block;
-            transform: translate(20%, 12%);
-        }
+//         i {
+//             display: block;
+//             transform: translate(20%, 12%);
+//         }
 
-        .signup {
-            border: 1px solid $gold;
-            border-radius: 4px;
-            padding: 0.5rem 2rem;
-        }
-    }
-}
+//         .signup {
+//             border: 1px solid $gold;
+//             border-radius: 4px;
+//             padding: 0.5rem 2rem;
+//         }
+//     }
+// }

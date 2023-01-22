@@ -1,5 +1,19 @@
 @use './variables' as *;
 
+//----------------------------
+// MIXIN LIBRARY -------------
+//----------------------------
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//----------------------------
+// MIXIN REUSABLES -------------
+//----------------------------
+
 @mixin link-style($font, $p1, $p2, $ls, $bw, $br) {
     font-family: $urbanist;
     border: $bw solid $gold;

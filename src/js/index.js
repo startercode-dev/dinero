@@ -65,3 +65,34 @@ const loadAnimations = (threshold) => {
 };
 
 loadAnimations(0.3);
+
+//---------------------------------
+// NAV BAR MOBILE
+//---------------------------------
+
+$('.mobile-nav-btn').click(() => {
+    $('.header__mobile-menu').toggleClass('show');
+    $('.header').toggleClass('fixed');
+    $('.mobile-nav-btn i').toggleClass('ph-x');
+    $('.mobile-nav-btn i').toggleClass('ph-list-light');
+    $('.hero').toggleClass('pt-35');
+});
+
+$(window).resize(() => {
+    const condition =
+        $('.header').hasClass('fixed') ||
+        $('.header__mobile-menu').hasClass('show') ||
+        $('.hero').hasClass('pt-35')
+            ? true
+            : false;
+    if ($(window).width() >= 520 && condition) {
+        $('.header').removeClass('fixed');
+        $('.header__mobile-menu').removeClass('show');
+        $('.hero').removeClass('pt-35');
+        if ($('.mobile-nav-btn i').hasClass('ph-x')) {
+            console.log(true);
+            $('.mobile-nav-btn i').toggleClass('ph-list-light');
+            $('.mobile-nav-btn i').toggleClass('ph-x');
+        }
+    }
+});

@@ -1,0 +1,193 @@
+@use '../helper' as *;
+
+.header {
+    @include flex-center;
+    padding: $space-m 0;
+    z-index: 1000;
+
+    .header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        width: min(85%, 192rem);
+    }
+
+    .logo {
+        font-size: calc($step-0 - 0.1rem);
+        font-family: 'Vollkorn SC', serif;
+        letter-spacing: calc($space-3xs + 0.2rem);
+    }
+
+    .mobile-nav-btn {
+        display: none;
+        border: none;
+        background: #fff;
+    }
+
+    &__menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: row;
+        gap: $space-s;
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        font-size: $step--1;
+        font-family: $playfair;
+        letter-spacing: 0.3rem;
+        color: $black;
+    }
+
+    .cta-list {
+        display: flex;
+        flex-direction: row;
+        gap: $space-m;
+    }
+
+    .cta-item a {
+        font-family: $urbanist;
+        font-size: $step--1;
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+    }
+
+    .signup {
+        border: 1.5px solid $gold;
+        border-radius: 5px;
+        color: $gold;
+        padding: $space-3xs $space-xs;
+        font-weight: 600;
+    }
+
+    &__mobile-menu {
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: #fff;
+    }
+
+    @media (width <= 64rem) {
+        .menu-list {
+            gap: $space-xs;
+        }
+
+        .cta-list {
+            gap: $space-s;
+        }
+
+        .menu-item a {
+            letter-spacing: 0.2rem;
+        }
+        .cta-item a {
+            letter-spacing: 0.2rem;
+            border-radius: 4px;
+        }
+    }
+
+    @media (width <= 44rem) {
+        .cta-list {
+            gap: $space-xs;
+        }
+
+        .signup {
+            border: 1px solid $gold;
+        }
+    }
+}
+
+@media (width <= 32.5rem) {
+    .header {
+        width: 100%;
+
+        //MOBILE
+        .mobile-nav-btn {
+            display: inline-block;
+            font-size: $step-2;
+        }
+
+        &__logo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            @include flex-center;
+            font-size: calc($step-1 - 0.1rem);
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__cta {
+            display: none;
+        }
+    }
+
+    .header__mobile-menu {
+        z-index: 900;
+        position: fixed;
+        transform: translateX(100%);
+        @include flex-center;
+        flex-direction: column;
+        gap: $space-m;
+        transition: all 0.4s;
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: $space-m;
+        }
+
+        .cta-list {
+            display: flex;
+            flex-direction: column;
+            gap: $space-m;
+        }
+
+        .menu-item {
+            @include flex-center;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            font-size: $step-0;
+            font-family: $playfair;
+            letter-spacing: 0.3rem;
+            color: $black;
+        }
+
+        .cta-item {
+            @include flex-center;
+        }
+
+        .cta-item a {
+            font-size: $step-0;
+            letter-spacing: 0.3rem;
+            cursor: pointer;
+            font-family: $urbanist;
+        }
+
+        .signup {
+            border: 1px solid $gold;
+            border-radius: 3px;
+            color: $gold;
+            padding: $space-2xs $space-l;
+            font-weight: 600;
+        }
+    }
+
+    .header__mobile-menu.show {
+        transform: translateX(0);
+    }
+}
