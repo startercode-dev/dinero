@@ -140,19 +140,21 @@
         transform: translateX(100%);
         @include flex-center;
         flex-direction: column;
-        gap: $space-m;
+        justify-content: flex-start;
+        gap: $space-xl;
         transition: all 0.4s;
+        padding-top: 10rem;
 
         .menu-list {
             display: flex;
             flex-direction: column;
-            gap: $space-m;
+            gap: $space-s;
         }
 
         .cta-list {
             display: flex;
             flex-direction: column;
-            gap: $space-m;
+            gap: $space-s;
         }
 
         .menu-item {
@@ -161,7 +163,7 @@
 
         .menu-item a {
             text-decoration: none;
-            font-size: $step-0;
+            font-size: $step-1;
             font-family: $playfair;
             letter-spacing: 0.3rem;
             color: $black;
@@ -172,7 +174,7 @@
         }
 
         .cta-item a {
-            font-size: $step-0;
+            font-size: $step-1;
             letter-spacing: 0.3rem;
             cursor: pointer;
             font-family: $urbanist;

@@ -2,7 +2,7 @@ import $, { each } from 'jquery';
 
 const documentHeight = () => {
     const doc = document.documentElement;
-    const height = window.innerHeight - $('.nav').outerHeight();
+    const height = window.innerHeight - $('.header').outerHeight();
     doc.style.setProperty('--doc-height', `${height}px`);
 };
 window.addEventListener('resize', documentHeight);
