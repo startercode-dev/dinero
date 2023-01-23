@@ -72,10 +72,10 @@ loadAnimations(0.3);
 
 $('.mobile-nav-btn').click(() => {
     $('.header__mobile-menu').toggleClass('show');
-    $('.header').toggleClass('fixed');
+    $('.header').toggleClass('fixed-top');
     $('.mobile-nav-btn i').toggleClass('ph-x');
     $('.mobile-nav-btn i').toggleClass('ph-list-light');
-    $('.hero').toggleClass('pt-35');
+    $('body').toggleClass('pt-53');
 });
 
 $(window).resize(() => {

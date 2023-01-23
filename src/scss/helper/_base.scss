@@ -61,6 +61,11 @@ ul {
     position: fixed;
 }
 
+.fixed-top {
+    position: fixed;
+    top: 0;
+}
+
 .grid {
     display: grid;
 }
@@ -98,6 +103,6 @@ ul {
 
 //MISC
 
-.pt-35 {
+.pt-53 {
     padding-top: 5.38rem;
 }
