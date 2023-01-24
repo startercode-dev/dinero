@@ -5,6 +5,10 @@
     padding: $space-m 0;
     z-index: 1000;
 
+    i {
+        color: $black;
+    }
+
     .header-container {
         position: relative;
         display: flex;
