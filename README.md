@@ -1,12 +1,3 @@
-# JS Template
+# Dinero (Mock Landing Page)
 
-Simple Javascript/HTML/SCSS template for getting ideas down on frontend focused projects.
-
-## Get Started
-
-Install all dependencies and get started:
-
-```
-npm i
-npm run dev
-```
+Dinero is a cutting-edge fintech company that specializes in providing innovative financial solutions to businesses and individuals, utilizing the latest in artificial intelligence and blockchain technology.
