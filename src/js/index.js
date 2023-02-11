@@ -2,7 +2,10 @@ import $, { each } from 'jquery';
 
 const documentHeight = () => {
     const doc = document.documentElement;
-    const height = window.innerHeight - $('.header').outerHeight();
+    const height =
+        window.innerHeight -
+        $('.header').outerHeight() -
+        $('.hero__main').outerHeight();
     doc.style.setProperty('--doc-height', `${height}px`);
 };
 window.addEventListener('resize', documentHeight);
@@ -64,7 +67,7 @@ const loadAnimations = (threshold) => {
     });
 };
 
-loadAnimations(0.3);
+loadAnimations(0.15);
 
 //---------------------------------
 // NAV BAR MOBILE

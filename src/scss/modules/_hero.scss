@@ -2,20 +2,21 @@
 
 .hero {
     width: min(85%, 192rem);
-    height: $docHeight;
+    // height: $docHeight;
     margin-inline: auto;
     align-items: center;
-    grid-auto-rows: 3fr 1fr;
+    grid-auto-rows: auto;
     // background-color: lightcyan;
+    margin-bottom: 6rem;
 
     @media (width <= 34rem) {
         align-items: start;
-        grid-auto-rows: 2fr 1fr;
+        grid-auto-rows: auto;
     }
 
     &__img {
         width: 100%;
-        height: 100%;
+        height: 60vh;
         background-image: url('../img/hero-img.webp');
         background-repeat: no-repeat;
         background-size: cover;
